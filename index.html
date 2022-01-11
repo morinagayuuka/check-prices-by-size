@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="MainWrapper">
+        <!-- ここから、右にあるセレクト画面について -->
+        <div class="selectWrapper">
+            <h2 class="titleSetumei">高さ×幅×(奥行)で<br>料金が変わります</span></h2>
+                <ul class="select1">
+                <li><a href="#hikidashi"class="tansu"><input type="button"id="tansuSelectJump"class="selectNum"class="tansuSelect"onclick="hakoSelectAction(event)"value="タンス"></a></li>
+                <li><a href="#hikidashi"class="tansu"><input type="button"id="chestSelectJump"class="selectNum"class="chestSelect"onclick="hakoSelectAction(event)"value="チェスト"></a></li>
+                <li><a href="#hikidashi" class="tansu"><input type="button"id="tansu2SelectJump"class="selectNum"class="tansu2Select"onclick="hakoSelectAction(event)"value="タンス2"></a></li>
+                <li class="tansu"style="font-size:12px;"id="hikidashikaguSelect"class="selectNum"class="hikidashikaguSelect">引き出しの割合が多い家具</li>
+            </ul>
+            <ul class="select2">
+                <li> <a href="#tana"class="tana"><input type="button"id="tanaSelectJump"class="selectNum"class="syokkidanaSelect"onclick="hakoSelectAction(event)"value="食器棚"></a></li>
+                <li><a href="#tana"class="tana"><input type="button"id="tanaSelectJump"class="selectNum"class="hondanaSelect"onclick="hakoSelectAction(event)"value="本棚"></a></li>
+                <li><a href="#tana" class="tana"><input type="button"id="tanaSelectJump"class="selectNum"class="todanaSelect"onclick="hakoSelectAction(event)"value="戸棚"></a></li>
+                <li><a href="#tana"class="tana"><input type="button"id="tanaSelectJump"class="selectNum"class="tyadansuSelect"onclick="hakoSelectAction(event)"value="茶ダンス"></a></li>
+                <li class="tana"style="font-size:12px;">棚の割合が多い家具</li>
+            </ul>
+            <ul class="select3">
+                <li> <a href="#sidebord"class="sidebord"><input type="button"id="sidebordSelectJump"class="selectNum"class="sidebordSelect"onclick="hakoSelectAction(event)"value="サイドボード"></a></li>
+            </ul>
+            <ul class="select4">
+                <li> <a href="#locker"class="locker"><input type="button"id="locker"class="selectNum"class="locker"onclick="hakoSelectAction(event)"value="ロッカー"></a></li>
+            </ul>
+            <ul class="select5">
+                <li> <a href="#monooki"class="monooki"><input type="button"id="monooki"class="selectNum"class="monooki"onclick="hakoSelectAction(event)"value="物置"></a></li>
+            </ul>
+        </div>
+          <!-- ここまで、右にあるセレクト画面について -->
+          <!-- ここからコンテンツ -->
+        <div class="contentsWrapper">
+            <!-- ここから タンスなどの//引き出しの割合//の多い箱もののセレクト画面 -->
+            <div class="hikidashi_wrapper">
+                <!-- タンス、チェスト、タンス2のいずれかを選ぶとここにジャンプ -->
+                <!-- サブタイトル -->
+                <div id="hikidashi"class="hikidashi"><h2 class="title">ﾀﾝｽ,ﾁｪｽﾄ,ﾀﾝｽ2(引き出し多い箱物)</h2></div>
+               <!-- 入力された高さ -->
+                <div class="hikidashinumInHeight"> <input class="nyuuryoku"type="text"name="高さ"></div>
+                <!-- 入力された幅 -->
+                <div class="hikidashinumInWeight"> <input class="nyuuryoku"type="text"name="幅"></div>
+                <!-- 選ばれた高さを表示 -->
+                <div id="hikidashinumAnswerHeight"class="hikidashinumAnswerHeight" > 高さ</div>
+                <!-- 選ばれた幅を表示 -->
+                <div id="hikidashinumAnswerWidth"class="hikidashinumAnswerWidth">幅</div>
+                <!-- どの種類の箱ものを選んだか表示-->
+                <div id="hikidashiSelect"class="hikidashiSelect"value="0"style="font-size:100%;"></div>
+                <!-- 今回の料金の表示 -->
+                <div id="hikidashinumAnswer"class="hikidashinumAnswer"value="0"></div>
+                <!-- リセットボタン -->
+                <div><input id="hikidashiReset"type="button"class="hikidashiReset"value="リセット"readonly onclick="reset(event)"></div>
+                <!-- 選ぶテーブル -->
+                <table class="hikidashiTable"id="hikidashiTable">
+                <tbody>
+                    <tr>
+                        <th><input type="button" id="hikidashi_H1"value="200-230"class="selectNum"class="hikidashi_H1" onclick="suutiTakasa(event)"></th>
+                        <td id="hikidashi_H1W1" >D 1300</td>
+                        <td  id="hikidashi_H1W2">D 1300</td>
+                        <td  id="hikidashi_H1W3">D 1300</td>
+                    </tr>
+                    <tr>
+                        <th><input type="button"id="hikidashi_H2" value="110-200"class="selectNum"class="hikidashi_H2" onclick="suutiTakasa(event)"></th>
+                        <td id="hikidashi_H2W1">B 500</td>
+                        <td id="hikidashi_H2W2">C 900</td>
+                        <td id="hikidashi_H2W3">D 1300</td>
+                    </tr>
+                    <tr>
+                        <th class="habasema"><input type="button"id="hikidashi_H3" value="100-110"class="selectNum"class="hikidashi_H3" onclick="suutiTakasa(event)"></th>
+                        <td id="hikidashi_H3W1">B 500</td>
+                        <td id="hikidashi_H3W2">B 500</td>
+                        <td id="hikidashi_H3W3">B 500</td>
+                    </tr>
+                    <tr>
+                        <th><input type="button"id="hikidashi_H4" value="0-100"class="selectNum"class="hikidashi_H4" onclick="suutiTakasa(event)"></th>
+                        <td id="hikidashi_H4W1">A 200</td>
+                        <td id="hikidashi_H4W2">B 500</td>
+                        <td id="hikidashi_H4W3">B 500</td>
+                    </tr>
+                    <tr>
+                        <th><h5>以上/未満</h5></th>
+                        <th><input type="button" id="hikidashi_W1"value="0-60"class="selectNum"class="hikidashi_W1" onclick="suutiHaba(event)"></th>
+                        <th><input type="button" id="hikidashi_W2"value="60-100"class="selectNum"class="hikidashi_W1" onclick="suutiHaba(event)"></th>
+                        <th><input type="button" id="hikidashi_W3"value="100-200"class="selectNum"class="hikidashi_W1" onclick="suutiHaba(event)"></th>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+            <!-- ここまで タンスなどの引き出しの割合の多い箱もののセレクト画面-->
+           <!--ここから　食器棚などの棚の割合が多い箱もののセレクト画面 -->
+           <div class="tana_wrapper">
+            <a id="tana" class="tana"><h2 class="title">食器棚,本棚,戸棚,茶ﾀﾞﾝｽ(棚の割合が多い箱物家具)</h2></a>
+            <div class="tananumInHeight"> <input class="nyuuryoku"type="text"name="高さ"></div>
+            <div class="tananumInWeight"> <input class="nyuuryoku"type="text"name="幅"></div>
+            <div id="tananumAnswerHeight"class="tananumAnswerHeight" > 高さ</div>
+            <div id="tananumAnswerWidth"class="tananumAnswerWidth">幅</div>
+            <div id="tananumAnswer"class="tananumAnswer"value="0"></div>
+            <div><input id="tanaReset"type="button"class="tanaReset"value="リセット"readonly onclick="reset(event)"></div>
+              <div id="tanaSelect"class="tanaSelect"value="0"style="font-size:100%;"></div>
+            <table class="tanaTable">
+            <tbody>
+                <tr>
+                    <th><input type="button" id="tana_H1"value="200-230"class="selectNum"class="tana_H1" onclick="suutiTakasaTana(event)"></th>
+                    <td id="tana_H1W1" >D 1300</td>
+                    <td  id="tana_H1W2">D 1300</td>
+                    <!-- <td  id="tana_H1W3">D 1300</td> -->
+                </tr>
+                <tr>
+                    <th><input type="button"id="tana_H2" value="110-200"class="selectNum"class="tana_H2" onclick="suutiTakasaTana(event)"></th>
+                    <td id="tana_H2W1">B 500</td>
+                    <td id="tana_H2W2">C 900</td>
+                    <!-- <td id="tana_H2W3">D 1300</td> -->
+                </tr>
+                <tr>
+                    <th class="habasema"><input type="button"id="tana_H3" value="100-110"class="selectNum"class="tana_H3" onclick="suutiTakasaTana(event)"></th>
+                    <td id="tana_H3W1">B 500</td>
+                    <td id="tana_H3W2">B 500</td>
+                    <!-- <td id="tana_H3W3">B 500</td> -->
+                </tr>
+                <tr>
+                    <th><input type="button"id="tana_H4" value="0-100"class="selectNum"class="tana_H4" onclick="suutiTakasaTana(event)"></th>
+                    <td id="tana_H4W1">A 200</td>
+                    <td id="tana_H4W2">B 500</td>
+                    <!-- <td id="tana_H4W3">B 500</td> -->
+                </tr>
+                <tr>
+                    <th><h5>以上/未満</h5></th>
+                    <th><input type="button" id="tana_W1"value="0-60"class="selectNum"class="tana_W1" onclick="suutiHabaTana(event)"></th>
+                    <th><input type="button" id="tana_W2"value="60-100"class="selectNum"class="tana_W1" onclick="suutiHabaTana(event)"></th>
+                    <!-- <th><input type="button" id="tana_W3"value="100-200"class="selectNum"class="tana_W1" onclick="suutiHaba(event)"></th> -->
+                </tr>
+            </tbody>
+        </table>
+        
+        </div>
+        <!-- 　ここまで食器棚などの棚の割合が多い箱もののセレクト画面 --> 
+                    <!--ここから　サイドボードのセレクト画面 -->
+                    <div class="sidebord_wrapper">
+                        <a id="sidebord" ><h2 class="title">サイドボード</h2></a>
+                        <div class="sidebordnumInHeight"> <input class="nyuuryoku"type="text"name="高さ"></div>
+                        <div class="sidebordnumInWeight"> <input class="nyuuryoku"type="text"name="幅"></div>
+                        <div id="sidebordnumAnswerHeight"class="sidebordnumAnswerHeight" > 高さ</div>
+                        <div id="sidebordnumAnswerWidth"class="sidebordnumAnswerWidth">幅</div>
+                        <div id="sidebordnumAnswer"class="sidebordnumAnswer"value="0"></div>
+                        <div><input id="sidebordReset"type="button"class="sidebordReset"value="リセット"readonly onclick="reset(event)"></div>
+                        <div id="sidebordSelect"class="sidebordSelect"value="0"style="font-size:100%;"></div>
+                        <table class="sidebordTable">
+                        <tbody>
+                            <tr>
+                                <th><input type="button" id="sidebord_H1"value="100-200"class="selectNum"class="sidebord_H1" onclick="suutiTakasasidebord(event)"></th>
+                                <td id="sidebord_H1W1" >D 1300</td>
+                                <td  id="sidebord_H1W2">D 1300</td>
+                                <td  id="sidebord_H1W3">D 1300</td>
+                                <td  id="sidebord_H1W4">D 1300</td>
+                            </tr>
+                            <tr>
+                                <th><input type="button"id="sidebord_H2" value="0-100"class="selectNum"class="sidebord_H2" onclick="suutiTakasasidebord(event)"></th>
+                                <td id="sidebord_H2W1">B 500</td>
+                                <td id="sidebord_H2W2">C 900</td>
+                                <td id="sidebord_H2W3">C 900</td>
+                                <td id="sidebord_H2W4">C 900</td>
+                            </tr>
+                            <tr>
+                                <th><h5>以上/未満</h5></th>
+                                <th><input type="button" id="sidebord_W1"value="0-60"class="selectNum"class="sidebord_W1" onclick="suutiHabasidebord(event)"></th>
+                                <th><input type="button" id="sidebord_W2"value="60-100"class="selectNum"class="sidebord_W1" onclick="suutiHabasidebord(event)"></th>
+                                <th><input type="button" id="sidebord_W3"value="100-160"class="selectNum"class="sidebord_W1" onclick="suutiHabasidebord(event)"></th>
+                                <th><input type="button" id="sidebord_W4"value="160-200"class="selectNum"class="sidebord_W1" onclick="suutiHabasidebord(event)"></th>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    </div>
+                    <!-- <div><table><tr><td class="test"></td><td class="test"></td></tr>
+                    <tr><td class="test"></td></tr></table></div> -->
+    </div>
+    
+<script src="index.js"></script>
+</body>
+</html>

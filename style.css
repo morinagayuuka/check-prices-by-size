@@ -1,0 +1,442 @@
+body{
+    width:100%;
+}
+
+
+.test{
+    background-color: firebrick;
+    width: 10px;
+    height: 10px;
+}
+/* アンカー */
+a:hover{
+    background-color: rgb(88, 142, 179);
+}
+a:visited {
+    color: rgb(42, 123, 189);
+  }
+/* インプットタグ */
+input:active{
+    border-bottom: solid 2px #c2bebb;
+    box-shadow: 0 0 1px rgba(100, 98, 98, 0.3);
+}
+input:hover{
+    background-color: rgb(115, 170, 207);
+}
+
+
+
+/* タイトル */
+.title{
+    color: rgb(30, 31, 32);
+    margin-left: 30px;
+    /* float: left; */
+}
+/* 基本ルールの説明 */
+.titleSetumei{
+    font-size: small;
+}
+/* 項目を選ぶ場所の全体のwrapper*/
+.selectWrapper{
+    position: fixed;
+    width:30%;
+    top: 0;
+    right:0;
+    z-index: 10;
+    background-color: rgba(213, 220, 223, 0.034);
+}
+/* 料金をせんたくできる場所の全体のwrapper*/
+.contentsWrapper{
+    position: relative;
+    left: 10px;
+}
+/* selectWrapperにあるulとli */
+ul{
+    border: 2px rgb(160, 169, 173) solid; 
+    list-style-type: none;
+    width:50%;
+}
+li{
+    display: block;
+    font-size: large;
+   /* margin-left: 10px; */
+   padding:10px;
+ 
+}
+  /* メモ帳に使おうとおもう入力場の幅*/
+  .nyuuryoku{
+      
+    width:50px;
+    height: 30px;
+
+  }
+
+
+/* contentsWrapperにあるテーブル */
+table {
+	/* border: 1px solid #5855555d; */
+	border-collapse: collapse;
+    width:50%;
+    height: 400px;
+    text-align: center;
+}
+/* ここまで項目を選ぶ */
+td, th {
+    border: 1px solid #5855555d;
+	border-collapse: collapse;
+    width:50%;
+    /* height: 400px;  */
+    background-color: rgba(218, 227, 238, 0.938);
+   
+}
+td, th {
+	padding: 3px;
+	width: 30px;
+	/* height: 25px; */
+}
+
+
+/* 100-110などの幅の狭い部分の表現（高さ） */
+.habasema{
+    height: 30px;
+}
+ /* 選択できる場所のカラーの制御 */
+ .selectNum{
+    width:100%;
+    height: 100%;
+    background:rgba(216, 216, 216, 0.226);
+    font-weight: bold;
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    color: rgba(41, 36, 36, 0.747);
+    border: 0mm;
+    border-bottom: solid 1px rgb(46, 59, 68);
+    /* border-radius: 10px;角の丸み */
+    font-size: large;
+    /* background:  rgb(178, 211, 226); */
+    /* border: none; */
+    /* background-color: rgba(236, 68, 214, 0.479); */
+}
+
+
+
+
+
+
+
+  /* 引き出しの箱もの */
+/*１.　引き出しの箱もののwrapper */
+.hikidashi_wrapper{
+    position: relative;
+    background-color: rgba(92, 112, 134, 0.089);
+    height: 600px;
+}
+
+  /*２. 引き出しの箱ものの結果の料金 */
+  .hikidashinumAnswer{
+    position: absolute;
+    top:510px;
+    left:405px;
+    background-color: rgba(115, 170, 207, 0.247);
+    /* border-style: double 1px rgb(46, 59, 68); */
+    border: double 4px  rgba(98, 106, 114, 0.726);
+    width: 100px;
+    height:50px;
+    font-size: x-large;
+    text-align:center;
+    padding-top:20px;
+}
+
+/* 3.　引き出しの今　選択している項目の表示*/
+.hikidashiSelect{
+    position: absolute;
+    top:510px;
+    left: 290px;
+    /* font-size: x-large; */
+    /* font-weight: bold; */
+    /* color:  rgb(32, 34, 36); */
+    /* padding-top: 50px; */
+    border: double 4px  rgba(98, 106, 114, 0.726);
+    width: 100px;
+    height:50px;
+    font-size: medium;
+    text-align:center;
+  padding-top:20px;
+}
+
+/* 4.　引き出し箱もののリセットボタン */
+.hikidashiReset{
+    position: absolute;
+    top:550px;
+    left: 200px; 
+    width: 80px;
+    height:30px;
+    border: 0mm;
+      border-bottom: solid 1px rgb(46, 59, 68);
+      background:rgba(168, 65, 65, 0.226);
+      color: rgba(41, 36, 36, 0.747);
+      /* pointer-events: none; */
+}
+
+/* 
+  .tansuSelect{
+    border: 0ch;
+    background:rgba(216, 216, 216, 0.226);
+    font-weight: bold;
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    color: rgba(41, 36, 36, 0.747);
+    border-bottom: solid 1px rgb(46, 59, 68);
+    /* border-radius: 10px;角の丸み */
+    /* font-size: large;
+  } */
+
+/* 5．引き出しのタイトルの位置 */
+  .hikidashi{
+      position: absolute;
+      top:0px;
+      left: 50px;
+      /* background-color: rgba(85, 38, 9, 0); */
+  }
+/* 6.引き出しのtable */
+  .hikidashiTable{
+    position: absolute;
+    top:100px;
+    left: 100px;
+}
+/* 7.引き出しの入力メモの場高さ */
+.hikidashinumInHeight{
+    position: absolute;
+    top:400px;
+    left: 10px;
+
+}
+/* 8.引き出しの入力メモの場幅 */
+.hikidashinumInWeight {
+    position: absolute;
+    top:550px;
+    left: 100px;
+    background-color: rgba(85, 38, 9, 0);
+}
+/*9. 引き出しの高さの入力値の出力 */
+.hikidashinumAnswerHeight{
+    position: absolute;
+    top:500px;
+    left: 10px;
+   
+    /* background-color: rgba(198, 207, 118, 0.856); */
+}
+/* 10.引き出しの幅の入力値の出力 */
+.hikidashinumAnswerWidth{
+    position: absolute;
+    top:500px;
+    left: 150px;
+    /* background-color: rgba(236, 214, 152, 0.856); */
+}
+
+
+
+
+
+
+
+
+
+
+
+/*1. 棚の箱もののwrapper */
+.tana_wrapper{
+    position: relative;
+    background-color: rgba(175, 224, 220, 0.144);
+    height: 600px;
+}
+/* 2.棚の料金 */
+.tananumAnswer{
+    position: absolute;
+    top:510px;
+    left:405px;
+    background-color: rgba(115, 170, 207, 0.247);
+    /* border-style: double 1px rgb(46, 59, 68); */
+    border: double 4px  rgba(98, 106, 114, 0.726);
+    width: 100px;
+    height:50px;
+    font-size: x-large;
+    text-align:center;
+    padding-top:20px;
+}
+
+/*3. 棚の今　選択している項目の表示*/
+.tanaSelect{
+    position: absolute;
+    top:510px;
+    left: 290px;
+    /* font-size: x-large; */
+    /* font-weight: bold; */
+    /* color:  rgb(32, 34, 36); */
+    /* padding-top: 50px; */
+    border: double 4px  rgba(98, 106, 114, 0.726);
+    width: 100px;
+    height:50px;
+    font-size: medium;
+    text-align:center;
+  padding-top:20px;
+}
+
+/* 4.棚の箱もののリセットボタン */
+.tanaReset{
+    position: absolute;
+    top:550px;
+    left: 200px; 
+    width: 80px;
+    height:30px;
+    border: 0mm;
+      border-bottom: solid 1px rgb(46, 59, 68);
+      background:rgba(168, 65, 65, 0.226);
+      color: rgba(41, 36, 36, 0.747);
+      /* pointer-events: none; */
+}
+
+  /*6. 棚のtable */
+  .tanaTable{
+    position: absolute;
+    top:100px;
+    left: 100px;
+}
+/*7.棚の入力メモの場高さ */
+.tananumInHeight{
+    position: absolute;
+    top:350px;
+    left: 10px;
+}
+/*8. 棚の入力メモの場幅 */
+.tananumInWeight{
+    position: absolute;
+    top:560px;
+    left: 100px;
+}
+/*9. 棚の高さの入力値の出力 */
+.tananumAnswerHeight{
+    position: absolute;
+    top:500px;
+    left: 10px;
+   
+}
+/*10. 棚の幅の入力値の出力 */
+.tananumAnswerWidth{
+    position: absolute;
+    top:500px;
+    left: 150px;
+}
+
+
+
+/* サイドボードの箱もの */
+/*１.　サイドボードの箱もののwrapper */
+.sidebord_wrapper{
+    position: relative;
+    background-color: rgba(92, 112, 134, 0.089);
+    height: 600px;
+}
+
+  /*２. サイドボードの箱ものの結果の料金 */
+  .sidebordnumAnswer{
+    position: absolute;
+    top:510px;
+    left:405px;
+    background-color: rgba(115, 170, 207, 0.247);
+    /* border-style: double 1px rgb(46, 59, 68); */
+    border: double 4px  rgba(98, 106, 114, 0.726);
+    width: 100px;
+    height:50px;
+    font-size: x-large;
+    text-align:center;
+    padding-top:20px;
+}
+
+/* 3.　サイドボードの今　選択している項目の表示*/
+.sidebordSelect{
+    position: absolute;
+    top:510px;
+    left: 290px;
+    /* font-size: x-large; */
+    /* font-weight: bold; */
+    /* color:  rgb(32, 34, 36); */
+    /* padding-top: 50px; */
+    border: double 4px  rgba(98, 106, 114, 0.726);
+    width: 100px;
+    height:50px;
+    font-size: medium;
+    text-align:center;
+  padding-top:20px;
+}
+
+/* 4.　サイドボード箱もののリセットボタン */
+.sidebordReset{
+    position: absolute;
+    top:550px;
+    left: 200px; 
+    width: 80px;
+    height:30px;
+    border: 0mm;
+      border-bottom: solid 1px rgb(46, 59, 68);
+      background:rgba(168, 65, 65, 0.226);
+      color: rgba(41, 36, 36, 0.747);
+      /* pointer-events: none; */
+}
+
+/* 
+  .tansuSelect{
+    border: 0ch;
+    background:rgba(216, 216, 216, 0.226);
+    font-weight: bold;
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    color: rgba(41, 36, 36, 0.747);
+    border-bottom: solid 1px rgb(46, 59, 68);
+    /* border-radius: 10px;角の丸み */
+    /* font-size: large;
+  } */
+
+/* 5．サイドボードのタイトルの位置 */
+  .sidebord{
+      /* position: absolute;
+      top:0px;
+      left: 50px; */
+      background-color: rgba(85, 38, 9, 0);
+  }
+/* 6.サイドボードのtable */
+  .sidebordTable{
+    position: absolute;
+    top:100px;
+    left: 100px;
+}
+/* 7.サイドボードの入力メモの場高さ */
+.sidebordnumInHeight{
+    position: absolute;
+    top:400px;
+    left: 10px;
+
+}
+/* 8.サイドボードの入力メモの場幅 */
+.sidebordnumInWeight {
+    position: absolute;
+    top:550px;
+    left: 100px;
+    background-color: rgba(85, 38, 9, 0);
+}
+/*9. サイドボードの高さの入力値の出力 */
+.sidebordnumAnswerHeight{
+    position: absolute;
+    top:500px;
+    left: 10px;
+   
+    /* background-color: rgba(198, 207, 118, 0.856); */
+}
+/* 10.サイドボードの幅の入力値の出力 */
+.sidebordnumAnswerWidth{
+    position: absolute;
+    top:500px;
+    left: 150px;
+    /* background-color: rgba(236, 214, 152, 0.856); */
+}
+
